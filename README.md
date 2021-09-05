@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo](https://julian-reactapp-calculator.herokuapp.com/)
+[Live Demo](https://julian-bookstore-react.herokuapp.com/)
 
 ## Getting Started
 
