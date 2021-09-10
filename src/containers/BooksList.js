@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook, removeBook } from '../actions/index';
 
-import Book from './Book';
+import Book from '../components/Book';
 
 const BooksList = ({ books }) => (
   <table>
