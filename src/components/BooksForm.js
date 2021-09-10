@@ -6,20 +6,20 @@ const BooksForm = () => {
   return (
     <div>
       <form>
-        <label for="title">
+        <label htmlFor="title">
           Book title
+          <input type="text" id="title" />
         </label>
-        <input type="text" id="title"/>
-        <label for="caregories">
+        <label htmlFor="categories">
           Select the Category
+          <select id="categories">
+            {bookCategories.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
         </label>
-        <select id="categories">
-          {bookCategories.map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
-            </option>
-          ))}
-        </select>
         <button type="submit">Add the book</button>
       </form>
     </div>
