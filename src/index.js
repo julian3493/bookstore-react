@@ -14,11 +14,15 @@ const initialState = [
 
 const store = createStore(index, { books: initialState });
 
+const wrapper = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    {wrapper}
   </React.StrictMode>,
   document.getElementById('root'),
 );
