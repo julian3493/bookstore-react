@@ -1,11 +1,10 @@
 import '../styles/App.css';
+import BooksList from './BooksList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Hello World!</p>
-      </header>
+      <BooksList />
     </div>
   );
 }
