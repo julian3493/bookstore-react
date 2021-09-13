@@ -7,6 +7,15 @@ const BooksForm = () => {
     title: '',
     category: '',
   })
+
+  const handleChange = (event) => {
+    if (event.target.id === 'title') {
+      setNewBook({...newBook, title: event.target.value})
+    }
+    if (event.target.id === 'categories') {
+      setNewBook({...newBook, category: event.target.value})
+    }
+  }
   
   const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
