@@ -1,6 +1,13 @@
 import React from 'react';
+import { useState } from 'react';
 
 const BooksForm = () => {
+  const [newBook, setNewBook] = useState({
+    id: Math.floor(Math.random() * 100),
+    title: '',
+    category: '',
+  })
+  
   const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
   return (
