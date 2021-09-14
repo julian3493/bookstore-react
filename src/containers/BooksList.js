@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { removeBook } from '../actions/index';
 
 import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = ({ books, remove }) => {
   const handleRemoveBook = (book) => {
@@ -22,6 +23,9 @@ const BooksList = ({ books, remove }) => {
           </th>
           <th>
             Category
+          </th>
+          <th>
+            <CategoryFilter />
           </th>
         </tr>
       </thead>
