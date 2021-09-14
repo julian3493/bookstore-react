@@ -20,7 +20,8 @@ const BooksForm = ({ create }) => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     create(newBook);
     setNewBook({
       id: Math.floor(Math.random() * 100),
@@ -33,7 +34,7 @@ const BooksForm = ({ create }) => {
 
   return (
     <div>
-      <form>
+      <form onSubmit={(event) => handleSubmit(event)}>
         <label htmlFor="title">
           Book title
           <input type="text" id="title" onChange={handleChange} />
@@ -48,7 +49,7 @@ const BooksForm = ({ create }) => {
             ))}
           </select>
         </label>
-        <button type="submit" onClick={handleSubmit}>Add the book</button>
+        <button type="submit">Add the book</button>
       </form>
     </div>
   );
