@@ -1,14 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../actions/index';
+import { removeBook, filterBook } from '../actions/index';
 
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({ books, remove }) => {
+const BooksList = ({ books, filter, remove }) => {
   const handleRemoveBook = (book) => {
     remove(book);
+  };
+
+  const handleFilterChange = (e) => {
+    filter(e.target.value);
   };
 
   return (
@@ -25,7 +29,7 @@ const BooksList = ({ books, remove }) => {
             Category
           </th>
           <th>
-            <CategoryFilter />
+            <CategoryFilter handleFilter={handleFilterChange} />
           </th>
         </tr>
       </thead>
@@ -44,6 +48,7 @@ BooksList.propTypes = {
       category: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  filter: PropTypes.string.isRequired,
   remove: PropTypes.func.isRequired,
 };
 
@@ -53,6 +58,7 @@ const mapStateProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   remove: (book) => dispatch(removeBook(book)),
+  filter: (category) => dispatch(filterBook(category)),
 });
 
 export default connect(mapStateProps, mapDispatchToProps)(BooksList);
