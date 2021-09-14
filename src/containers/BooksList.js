@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createBook, removeBook } from '../actions/index';
+import { removeBook } from '../actions/index';
 
 import Book from '../components/Book';
 
@@ -41,7 +41,6 @@ const mapStateProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  create: (book) => dispatch(createBook(book)),
   delete: (book) => dispatch(removeBook(book)),
 });
 

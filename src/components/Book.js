@@ -6,11 +6,16 @@ const Book = ({ book }) => (
     <td>{book.id}</td>
     <td>{book.title}</td>
     <td>{book.category}</td>
+    <td><button type="button">Remove</button></td>
   </tr>
 );
 
 Book.propTypes = {
-  book: PropTypes.objectOf.isRequired,
+  book: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Book;
