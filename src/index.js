@@ -12,7 +12,7 @@ const initialState = [
   { id: Math.floor(Math.random() * 100), title: 'Book3', category: 'History' },
 ];
 
-const store = createStore(index, { books: initialState });
+const store = createStore(index, { books: initialState, filter: '' });
 
 const wrapper = (
   <Provider store={store}>
