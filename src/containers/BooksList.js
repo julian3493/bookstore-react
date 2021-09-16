@@ -31,9 +31,12 @@ const BooksList = ({
   return (
     <div className="bookslist">
       <header className="header">
-        <h1>BookStore CMS</h1>
-        <p>BOOKS</p>
-        <CategoryFilter handleFilter={handleFilterChange} />
+        <div className="header-left">
+          <h1>BookStore CMS</h1>
+          <p>BOOKS</p>
+          <CategoryFilter handleFilter={handleFilterChange} />
+        </div>
+        <i className="fa fa-user" aria-hidden="true" />
       </header>
       <div className="books">
         { booksFilter().map((book) => <Book key={book} book={book} remove={handleRemoveBook} />)}

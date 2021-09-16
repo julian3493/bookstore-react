@@ -5,6 +5,13 @@
   padding: 0 5%;
   align-items: center;
   border-bottom: 1px solid #eee;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
 }
 
 .header h1 {
@@ -14,4 +21,8 @@
 .header h1,
 .header p {
   margin-right: 25px;
+}
+
+.fa-user {
+  margin-right: 15px;
 }
