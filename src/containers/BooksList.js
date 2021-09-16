@@ -35,7 +35,7 @@ const BooksList = ({
         <p>BOOKS</p>
         <CategoryFilter handleFilter={handleFilterChange} />
       </header>
-      <div className="book-row">
+      <div className="books">
         { booksFilter().map((book) => <Book key={book} book={book} remove={handleRemoveBook} />)}
       </div>
     </div>
