@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
+import '../styles/BooksForm.css';
 
 const BooksForm = ({ create }) => {
   const [newBook, setNewBook] = useState({
@@ -33,23 +34,19 @@ const BooksForm = ({ create }) => {
   const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
   return (
-    <div>
+    <div className="form-container">
+      <h2>ADD NEW BOOK</h2>
       <form onSubmit={(event) => handleSubmit(event)}>
-        <label htmlFor="title">
-          Book title
-          <input type="text" id="title" onChange={handleChange} />
-        </label>
-        <label htmlFor="categories">
-          Select the Category
-          <select id="categories" onChange={handleChange}>
-            {bookCategories.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button type="submit">Add the book</button>
+        <input type="text" id="title" placeholder="Book Title" className="form-title" onChange={handleChange} />
+        <select id="categories" className="form-categories" onChange={handleChange}>
+          <option value="">Select category</option>
+          {bookCategories.map((cat) => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+        <button type="submit" className="add-btn">ADD BOOK</button>
       </form>
     </div>
   );

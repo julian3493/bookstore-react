@@ -1,0 +1,43 @@
+.form-container {
+  width: 100%;
+  border-top: 1px solid #eee;
+  padding: 2% 0;
+  margin: 5% 0;
+  text-align: left;
+}
+
+h2,
+form {
+  margin: 0 5%;
+}
+
+h2 {
+  margin-bottom: 35px;
+}
+
+form {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.form-title {
+  width: 50%;
+  height: 30px;
+  border: #eee;
+  margin-right: 20px;
+}
+
+.form-categories {
+  width: 20%;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.add-btn {
+  height: 30px;
+  background-color: #0290ff;
+  border-radius: 5%;
+  color: white;
+  padding: 3px 10px;
+}
