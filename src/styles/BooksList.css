@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  margin: 0 0 20px 0;
+  background-color: white;
+  padding: 0 5%;
+  align-items: center;
+}
+
+.header h1 {
+  color: #0290ff;
+}
+
+.header h1,
+.header p {
+  margin-right: 25px;
+}

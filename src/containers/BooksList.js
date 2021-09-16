@@ -5,6 +5,7 @@ import { removeBook, filterBook } from '../actions/index';
 
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import '../styles/BooksList.css';
 
 const BooksList = ({
   books, filter, remove, filterSelection,
@@ -28,27 +29,16 @@ const BooksList = ({
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>
-            BookID
-          </th>
-          <th>
-            Title
-          </th>
-          <th>
-            Category
-          </th>
-          <th>
-            <CategoryFilter handleFilter={handleFilterChange} />
-          </th>
-        </tr>
-      </thead>
-      <tbody>
+    <div className="bookslist">
+      <header className="header">
+        <h1>BookStore CMS</h1>
+        <p>BOOKS</p>
+        <CategoryFilter handleFilter={handleFilterChange} />
+      </header>
+      <div className="book-row">
         { booksFilter().map((book) => <Book key={book} book={book} remove={handleRemoveBook} />)}
-      </tbody>
-    </table>
+      </div>
+    </div>
   );
 };
 
