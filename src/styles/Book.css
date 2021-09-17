@@ -1,0 +1,130 @@
+.book-row {
+  background-color: white;
+  margin: 3% 5%;
+  padding: 25px 25px;
+  border: 1px solid #eee;
+  display: flex;
+}
+
+.left-container {
+  width: 40%;
+  text-align: left;
+}
+
+p {
+  margin: 0;
+}
+
+.book-info {
+  margin-bottom: 20px;
+}
+
+.book-category {
+  color: #939393;
+}
+
+.book-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.book-author {
+  color: #508ec3;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  border-right: 2px solid #eee;
+  color: #508ec3;
+}
+
+.last-btn {
+  border: none;
+}
+
+.graph {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.graph span {
+  width: 80px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.circle-wrap {
+  width: 90px;
+  height: 90px;
+  background: #e6e2e7;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0, 150px, 150px, 75px);
+}
+
+.circle-wrap .circle .fill,
+.circle-wrap .circle .mask.full {
+  animation: fill ease-in-out 3s;
+  transform: rotate(126deg);
+}
+
+.circle-wrap .circle .mask .fill {
+  clip: rect(0, 75px, 150px, 0);
+  background-color: #307bbe;
+}
+
+.circle-wrap .inside-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 130px;
+  text-align: center;
+  margin-top: 11px;
+  margin-left: 11px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.chapter-container {
+  width: 35%;
+  margin: 2%;
+  border-left: 1px solid gray;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.current {
+  color: #939393;
+}
+
+.update-btn {
+  background-color: #0290ff;
+  border-radius: 5%;
+  color: white;
+  padding: 3px 10px;
+  margin-top: 15px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/CategoryFilter.css';
 
 const CategoryFilter = ({ handleFilter }) => {
   const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -7,7 +8,7 @@ const CategoryFilter = ({ handleFilter }) => {
   return (
     <div>
       <label htmlFor="filtercategories">
-        Select the Category
+        CATEGORY:
         <select id="filtercategories" onChange={handleFilter}>
           {categories.map((cat) => (
             <option key={cat} value={cat}>
